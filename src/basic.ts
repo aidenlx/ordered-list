@@ -12,13 +12,16 @@ export function togglePlugin(sender: NotifySender) {
     ? NSLocale.preferredLanguages()[0].substring(0, 2)
     : "en";
   let cnTips, enTips;
+
   if (self[addonOnName]) {
-    cnTips = `${pluginName}已关闭`;
-    enTips = `${pluginName}disabled`;
+    cnTips = "序号创建已停止";
+    enTips = `disabled`;
+    self.previous = undefined;
   } else {
-    cnTips = "启动";
+    cnTips = "开始创建序号，第一个选中的笔记将被作为初始值";
     enTips = "enabled";
   }
+
   self[addonOnName] = !self[addonOnName]
   showHUD(lan === "zh" ? cnTips : enTips);
   NSUserDefaults.standardUserDefaults().setObjectForKey(
