@@ -12,13 +12,12 @@ export function togglePlugin(sender: NotifySender) {
     ? NSLocale.preferredLanguages()[0].substring(0, 2)
     : "en";
   let cnTips, enTips;
-
   if (self[addonOnName]) {
     cnTips = "序号创建已停止";
     enTips = `disabled`;
-    self.previous = undefined;
+
   } else {
-    cnTips = "开始创建序号，第一个选中的笔记将被作为初始值";
+    cnTips = "开始自动序号创建，完成后请记得关闭";
     enTips = "enabled";
   }
 
