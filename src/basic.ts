@@ -1,7 +1,7 @@
 import { NotifySender } from "@alx-plugins/marginnote";
 import { showHUD } from "modules/tools";
 
-export const pluginName = "MYADDON";
+export const pluginName = "ordered-list";
 
 export const toggleHandlerName = `toggle${pluginName}`
 

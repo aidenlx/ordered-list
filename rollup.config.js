@@ -30,7 +30,7 @@ export default {
       ]
     }),
     zip({
-      file: "MYADDON.mnaddon"
+      file: "ordered-list.mnaddon"
     })
   ],
 };

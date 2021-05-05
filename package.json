@@ -1,5 +1,5 @@
 {
-  "name": "MYADDON",
+  "name": "ordered-list",
   "version": "0.0.0",
   "description": "",
   "main": "",
@@ -47,7 +47,7 @@
     "github": {
       "release": true,
       "assets": [
-        "dist/MYADDON.mnaddon"
+        "dist/ordered-list.mnaddon"
       ],
       "proxy": "http://127.0.0.1:7890",
       "releaseName": "${version}"

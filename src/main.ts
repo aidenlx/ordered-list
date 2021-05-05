@@ -2,10 +2,9 @@
 import { InstMembers, ClsMembers } from "@alx-plugins/marginnote";
 import { addonOnName, pluginName, toggleHandlerName, togglePlugin } from "basic";
 import { bindEventHandlers, getObjCClassDeclar as getDeclar, showHUD } from "modules/tools";
-import { onPopupMenuOnNote, onPopupMenuOnSelection } from "./eventHandlers";
+import { onPopupMenuOnNote } from "./eventHandlers";
 
 const bindEvt = bindEventHandlers([
-  { event: "PopupMenuOnSelection", handler: onPopupMenuOnSelection },
   { event: "PopupMenuOnNote", handler: onPopupMenuOnNote },
 ]);
 

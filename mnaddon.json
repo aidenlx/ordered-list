@@ -1,7 +1,7 @@
 {
-    "addonid": "marginnote.extension.MYADDON",
+    "addonid": "marginnote.extension.ordered-list",
     "author": "",
-    "title": "MYADDON",
+    "title": "Ordered List",
     "version": "0.0.0",
     "marginnote_version_min": "3.7.5",
     "cert_key": ""

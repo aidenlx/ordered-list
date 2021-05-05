@@ -21,27 +21,7 @@ export function onPopupMenuOnNote(sender: PopupMenuOnNote_Sender) {
   }
 
   try {
-    copy(note.noteId??"");
-  } catch (error) {
-    showHUD(error.toString());
-  }
-}
-
-export function onPopupMenuOnSelection(sender: PopupMenuOnSelection_Sender) {
-  if (
-    !Application.sharedInstance().checkNotifySenderInWindow(sender, self.window)
-  )
-    return; //Don't process message from other window
-
-  if (!self[addonOnName]) return;
-
-  const { selectionText: selection } = sender.userInfo
-    .documentController;
-
-  try {
-    if (selection && selection.length) {
-      copy(selection);
-    }
+    
   } catch (error) {
     showHUD(error.toString());
   }
