@@ -2,9 +2,8 @@ import {
   PopupMenuOnNote_Sender,
 } from "@alx-plugins/marginnote";
 import { addonOnName } from "basic";
+import { templateTitle } from "modules/templateTitle";
 import { showHUD } from "modules/tools";
-import { setChildTitleOf } from "./modules/setChildTitleOfNote";
-import { setSeqTitleOf } from "./modules/setSeqTitleOfNote";
 
 export function onPopupMenuOnNote(sender: PopupMenuOnNote_Sender) {
   if (
@@ -23,11 +22,7 @@ export function onPopupMenuOnNote(sender: PopupMenuOnNote_Sender) {
 
   try {
     if (!note.groupNoteId) {
-      const result1 = setSeqTitleOf(note);
-      if (!result1) {
-        const result2 = setChildTitleOf(note);
-        if (result2) self.previous = undefined;
-      }
+      templateTitle(note);
     }
   } catch (error) {
     showHUD(error.toString());
